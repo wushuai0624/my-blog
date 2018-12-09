@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{#页面标题#}
+ {% block title %}
+    我的博客
+ {% endblock %}
+{% block nav_blog_active %}active{% endblock %}
+{#加载静态文件库#}
+{% load staticfiles %}
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock %}
+{#页面内容#}
+  {% block content %}
+      <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">{% block blog_list_title %}博客列表(一共有{{ page_of_blogs.paginator.count }}篇博客){% endblock %}</div>
+                    <div class="panel-body">
+                        {% for blog in blogs %}
+                            <div class="blog">
+                                <h3><a href="{% url 'blog_detail' blog.pk %}"> {{blog.title}}</a></h3>
+                                <p class="blog-info">
+                                    <span class="glyphicon glyphicon-tag">
+                                        <a href="{% url 'blogs_with_type' blog.blog_type.pk %}">{{ blog.blog_type }}</a>
+                                    </span>
+                                    <span class="glyphicon glyphicon-time">
+                                        {{ blog.created_time|date:"Y-m-d" }}
+                                    </span>
+                                    <span class="glyphicon glyphicon-time">
+                                        Read: {{ blog.read_num }}
+                                    </span>
+                                </p>
+            {#  添加过滤器 " | "   django自带的 truntruncatechars函数限制长度#}
+                                <p>{{ blog.content|truncatechars:100 }}</p>
+                            </div>
+                        {% empty %}
+                            <div class="blog">
+                                <h3>—————————暂无博客，敬请期待—————————</h3>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+                <div>
+                    <ul class="pagination pagination-lg">
+                    <li>
+                        {% if page_of_blogs.has_previous %}
+                              <a href="?page={{ page_of_blogs.previous_page_number }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                              </a>
+                            {% else %}
+                                <span aria-hidden="true">&laquo;</span>
+                        {% endif %}
+                    </li>
+                          {% for page_num in page_of_blogs.paginator.page_range %}
+                                    <li class="{% if page_num == page_of_blogs.number %}active{% endif %}"><a href="?page={{ page_num }}">{{ page_num }}</a></li>
+                            {% endfor %}
+                    <li>
+                        {% if page_of_blogs.has_next %}
+                            <a href="?page={{ page_of_blogs.next_page_number }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                            {% else %}
+                                <span aria-hidden="true">&laquo;</span>
+                        {% endif %}
+                    </li>
+                  </ul>
+                </div>
+            </div>
+{#        列响应式布局 div里边class 一般按照顺序从小到大 去适应屏幕 #}
+            <div class="hidden-xs col-sm-4 col-md-3 col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading" >博客分类</div>
+                    <div class="panel-body">
+                        <ul class="blog-types">
+                             {% for blog_type in blog_types %}
+                                <li><a href="{% url 'blogs_with_type' blog_type.pk %}">{{ blog_type.type_name }}
+                                </a></li>
+                             {% empty %}
+                                 <li>暂无分类</li>
+                             {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+  {% endblock %}

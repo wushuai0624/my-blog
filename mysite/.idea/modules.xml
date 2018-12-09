@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../Data_analytics/.idea/Data_analytics.iml" filepath="$PROJECT_DIR$/../../Data_analytics/.idea/Data_analytics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../MxOnline/.idea/MxOnline.iml" filepath="$PROJECT_DIR$/../../MxOnline/.idea/MxOnline.iml" />
+      <module fileurl="file://E:/Python/simple/code/.idea/code.iml" filepath="E:/Python/simple/code/.idea/code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../data_object/.idea/data_object.iml" filepath="$PROJECT_DIR$/../../data_object/.idea/data_object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../djangotest/.idea/djan_liuyan_info.iml" filepath="$PROJECT_DIR$/../../djangotest/.idea/djan_liuyan_info.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../flask_news1/.idea/flask_news1.iml" filepath="$PROJECT_DIR$/../../flask_news1/.idea/flask_news1.iml" />
+      <module fileurl="file://$USER_HOME$/images360/.idea/images360.iml" filepath="$USER_HOME$/images360/.idea/images360.iml" />
+      <module fileurl="file://E:/新建文件夹/新建文件夹/python/Python+Django+Ansible Playbook自动化运维项目实战/project/j26sxn/.idea/j26sxn.iml" filepath="E:/新建文件夹/新建文件夹/python/Python+Django+Ansible Playbook自动化运维项目实战/project/j26sxn/.idea/j26sxn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../my_first_web/.idea/my_first_web.iml" filepath="$PROJECT_DIR$/../../my_first_web/.idea/my_first_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mysite.iml" filepath="$PROJECT_DIR$/.idea/mysite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../pachong/.idea/pachong.iml" filepath="$PROJECT_DIR$/../../pachong/.idea/pachong.iml" />
+      <module fileurl="file://$USER_HOME$/scrapydownloadertest/.idea/scrapydownloadertest.iml" filepath="$USER_HOME$/scrapydownloadertest/.idea/scrapydownloadertest.iml" />
+      <module fileurl="file://$USER_HOME$/scrapyseleniumtest/.idea/scrapyseleniumtest.iml" filepath="$USER_HOME$/scrapyseleniumtest/.idea/scrapyseleniumtest.iml" />
+      <module fileurl="file://$USER_HOME$/tutorial/.idea/tutorial.iml" filepath="$USER_HOME$/tutorial/.idea/tutorial.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/html和css学习/前端框架/.idea/前端框架.iml" filepath="$USER_HOME$/Desktop/html和css学习/前端框架/.idea/前端框架.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../多线程与多进程/.idea/多线程与多进程.iml" filepath="$PROJECT_DIR$/../../多线程与多进程/.idea/多线程与多进程.iml" />
+    </modules>
+  </component>
+</project>

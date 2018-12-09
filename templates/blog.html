@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+    {% block content %}
+        {% for b in bl %}
+            <h2>{{ b.title }}</h2>
+            <p>{{ b.time }}</p>
+            <p>{{ b.author }}</p>
+            <p>{{ b.text }}</p>
+        {% endfor %}
+    {% endblock %}
